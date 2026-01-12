@@ -1,3 +1,18 @@
 flask
-flask-cors
-openai
+   flask-cors
+   openai
+   gunicorn
+```
+
+3. Push changes to GitHub
+4. Railway will auto-deploy with Flask using gunicorn ✅
+
+---
+
+## **Option 2: Add a Procfile (RECOMMENDED)**
+
+Create a new file called `Procfile` (no extension!) in your repository root:
+
+**Procfile:**
+```
+web: gunicorn chatbot_backend:app
