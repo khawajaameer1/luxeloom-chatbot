@@ -11,7 +11,7 @@ import random
 from typing import Dict, List
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for frontend requests
+CORS(app, origins="*")  # Enable CORS for frontend requests
 
 class LuxeloomChatbot:
     """Web-adapted chatbot for Luxeloom website"""
@@ -207,3 +207,4 @@ if __name__ == '__main__':
     print("💬 Chat endpoint: http://localhost:5000/api/chat")
     print("\n✨ Make sure to update the frontend API URL if running on different port!")
     app.run(debug=True, host='0.0.0.0', port=5000)
+
